@@ -50,9 +50,9 @@ To develop a web application leveraging the CVE API to retrieve detailed informa
 <img width="1675" alt="Screenshot 2024-05-01 at 3 27 20 PM" src="https://github.com/Joshua-David1/Securin-CVEs/assets/69303816/74d50167-0d60-47ed-874c-2204bae0f3af">
 
 7. Filteration can also be done by CVE-ID, BASE SCORE and Recently updated CVEs.
-
+<br>
+<br>
 <img width="1680" alt="Screenshot 2024-05-01 at 3 29 41 PM" src="https://github.com/Joshua-David1/Securin-CVEs/assets/69303816/95f6187e-f197-4eb3-9f6d-6a01ab6a4a01">
-8. When the link of a particular CVE is clicked, a detailed description of the CVE could be viewed.
-<img width="1675" alt="Screenshot 2024-05-01 at 3 27 20 PM" src="https://github.com/Joshua-David1/Securin-CVEs/assets/69303816/9ee5554e-6fff-4723-acf9-8a6ae1e43417">
+9. When the link of a particular CVE is clicked, a detailed description of the CVE could be viewed.
 
 
