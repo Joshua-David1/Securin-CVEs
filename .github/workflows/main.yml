@@ -1,0 +1,24 @@
+name: Build and push docker images to Docker Hub
+
+on: push
+
+jobs:
+  build_and_push_to_registry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to Repository
+        uses : docker/login-action@v3
+        with : 
+          username : ${{SECRETS.DOCKERHUB_EMAIL}}
+          password : ${{SECRETS.DOCKERHUB_PASSWORD}}
+
+      - name : build and push docker image to registry
+        uses : docker/build-push-action@v5
+        with :
+          context : ./
+          push : true
+          tags : joshuadavid9219/securin-cve
+      
