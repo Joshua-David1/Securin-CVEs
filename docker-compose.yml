@@ -1,0 +1,5 @@
+services:
+  wsgi:
+    image: joshuadavid9219/securin-cve
+    ports:
+      - "5000:5000"
