@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Get environment
         run: |
-          echo ${{needs.prepare.outputs.env_name}}
+          echo $GITHUB_OUTPUT
       - name: Checkout repository
         uses: actions/checkout@v4
 
