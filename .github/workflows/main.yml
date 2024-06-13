@@ -20,6 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{needs.prepare.outputs.env_name}}
     steps:
+      - name: Get environment
+        run: |
+          echo ${{needs.prepare.outputs.env_name}}
       - name: Checkout repository
         uses: actions/checkout@v4
 
