@@ -1,12 +1,24 @@
 name: Build and push docker images to Docker Hub
 
-on: [push]
-
-workflow_dispatch:
+on:
+  workflow_dispatch:
+  push:
 
 jobs:
-  build_and_push_to_registry:
+
+  prepare:
     runs-on: ubuntu-latest
+    steps:
+      - name: Get environment
+        id: env_get
+        run: |
+          echo "env_name=production" >> "$GITHUB_OUTPUT"
+        
+
+  build_and_push_to_registry:
+    needs: [prepare]
+    runs-on: ubuntu-latest
+    environment: ${{needs.prepare.outputs.env_name}}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
