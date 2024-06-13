@@ -1,6 +1,8 @@
 name: Build and push docker images to Docker Hub
 
-on: push
+on: [push]
+
+workflow_dispatch:
 
 jobs:
   build_and_push_to_registry:
