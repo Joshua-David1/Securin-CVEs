@@ -13,6 +13,9 @@ jobs:
         id: env_get
         run: |
           echo "env_name=production" >> "$GITHUB_OUTPUT"
+
+    outputs:
+      env_name: ${{prepare.steps.output.env_name}}
         
 
   build_and_push_to_registry:
